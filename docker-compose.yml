@@ -1,0 +1,13 @@
+version: '2'
+services:
+  ui:
+    build: ./ui
+    volumes:
+      - ./ui:/www/ui
+  nginx:
+    build: ./proxy
+    volumes_from:
+      - ui
+    ports:
+      - 0.0.0.0:80:80
+      - 0.0.0.0:443:443
