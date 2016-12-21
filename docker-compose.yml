@@ -4,10 +4,15 @@ services:
     build: ./ui
     volumes:
       - ./ui:/www/ui
+  sass:
+    build: ./sass
+    volumes:
+      - ./sass:/www/static
   nginx:
     build: ./proxy
     volumes_from:
       - ui
+      - sass
     ports:
       - 0.0.0.0:80:80
       - 0.0.0.0:443:443
