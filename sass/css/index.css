@@ -1,8 +1,37 @@
 html,
-body,
-ul,
-ol {
+body {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  height: 100%; }
+
+#Top-triangle {
+  fill: #00FF00;
+  transform: rotateX(180deg); }
+
+#flap-open {
+  transform: translate(308px, 95px) scale(-1, -1) translate(-308px, -95px) rotateX(90deg);
+  transition: 500ms linear 500ms; }
+
+#flap-closed {
+  transform: translate(308px, 95px) scale(-1, -1) translate(-308px, -95px) rotateX(180deg);
+  transition: 500ms linear 0s; }
+
+#letter {
+  transform: translate(27px, 200px);
+  transition: 500ms linear 700ms; }
+
+.envelope {
+  transition: 250ms linear; }
+
+.envelope:hover {
+  transform: translate(100px) scale(1.1);
+  cursor: pointer; }
+
+.open #letter {
+  transform: translate(27px, 0px); }
+.open #flap-closed {
+  transform: translate(308px, 95px) scale(-1, -1) translate(-308px, -95px) rotateX(90deg); }
+.open #flap-open {
+  transform: translate(308px, 95px) scale(-1, -1) translate(-308px, -95px) rotateX(0deg); }
 
 /*# sourceMappingURL=index.css.map */

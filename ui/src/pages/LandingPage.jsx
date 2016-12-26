@@ -1,5 +1,6 @@
 import React from 'react';
 import PureRenderMixin from 'react-addons-pure-render-mixin';
+import EnvelopeContainer from '../components/EnvelopeContainer';
 
 
 class LandingPage extends React.Component {
@@ -12,12 +13,11 @@ class LandingPage extends React.Component {
 
     return (
 
-      <svg version="1.1">
-        <rect fill="#DDDDDD" stroke-width="1" width="614" height="391" rx="4"></rect>
-      </svg>
+      <EnvelopeContainer />
 
     );
   }
 }
+
 
 export default LandingPage;
