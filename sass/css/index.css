@@ -20,18 +20,52 @@ body {
   transform: translate(27px, 200px);
   transition: 500ms linear 700ms; }
 
-.envelope {
+.svg-envelope {
   transition: 250ms linear; }
 
-.envelope:hover {
-  transform: translate(100px) scale(1.1);
+.svg-envelope:hover {
+  transform: scale(1.1);
   cursor: pointer; }
 
-.open #letter {
+.open #letter,
+.full-open #letter {
   transform: translate(27px, 0px); }
-.open #flap-closed {
+.open #flap-closed,
+.full-open #flap-closed {
   transform: translate(308px, 95px) scale(-1, -1) translate(-308px, -95px) rotateX(90deg); }
-.open #flap-open {
+.open #flap-open,
+.full-open #flap-open {
   transform: translate(308px, 95px) scale(-1, -1) translate(-308px, -95px) rotateX(0deg); }
+.open #Triangle-2,
+.full-open #Triangle-2 {
+  transform: translate(308px, 286.5px) scale(1, -1) translate(-308px, -286px); }
+.open #Triangle-3,
+.full-open #Triangle-3 {
+  transform: translate(168px, 387px) rotate(90deg) translate(-168px, -387px); }
+.open #Triangle-3-Copy,
+.full-open #Triangle-3-Copy {
+  transform: translate(447px, 386px) scale(-1, 1) rotate(90deg) translate(-447px, -386px); }
+
+.full-open #bottom-triangle {
+  transform: translate(0, 2500px);
+  transition: 6000ms cubic-bezier(0.4, 0, 1, 1) 0s; }
+.full-open #Triangle-3-Copy {
+  transform: translate(447px, 386px) scale(-1, 1) rotate(90deg) translate(2053px, -386px);
+  transition: 6000ms cubic-bezier(0.4, 0, 1, 1) 0s; }
+.full-open #Triangle-2 {
+  transform: translate(308px, 286.5px) scale(1, -1) translate(-308px, -2786px);
+  transition: 6000ms cubic-bezier(0.4, 0, 1, 1) 0s; }
+.full-open #Triangle-3 {
+  transform: translate(168px, 387px) rotate(90deg) translate(2332px, -387px);
+  transition: 6000ms cubic-bezier(0.4, 0, 1, 1) 0s; }
+.full-open #letter {
+  transform: translate(27px, -2500px);
+  transition: 6000ms cubic-bezier(0.4, 0, 1, 1) 0s; }
+.full-open #flap-closed {
+  transform: translate(308px, 95px) scale(-1, -1) translate(-308px, -2595px) rotateX(90deg);
+  transition: 6000ms cubic-bezier(0.4, 0, 1, 1) 0s; }
+.full-open #flap-open {
+  transform: translate(308px, 95px) scale(-1, -1) translate(-308px, -2595px) rotateX(0deg);
+  transition: 6000ms cubic-bezier(0.4, 0, 1, 1) 0s; }
 
 /*# sourceMappingURL=index.css.map */

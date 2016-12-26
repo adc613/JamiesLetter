@@ -4,7 +4,7 @@ import {
 import { fromJS } from 'immutable';
 
 const initialState = fromJS({
-  open: false,
+  open: 0,
 });
 
 export default function reducer(state=initialState, action) {
@@ -21,6 +21,7 @@ export default function reducer(state=initialState, action) {
 
 function open(state, payload) {
 
-  return state.set('open', true);
+  let open = payload.open;
+  return state.set('open', open);
 
 }

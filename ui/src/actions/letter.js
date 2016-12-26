@@ -1,11 +1,13 @@
 export const OPEN = "LETTER @ OPEN";
 
 
-export function openAction() {
+export function openAction(open) {
 
   return {
     type: OPEN,
-    payload: {}
+    payload: {
+      open,
+    }
   };
 
 }
@@ -14,7 +16,9 @@ export function open() {
 
   return (dispatch, getState) => {
 
-    dispatch(openAction());
+    let state = getState();
+    let open = 1 + state.letter.get('open');
+    dispatch(openAction(open));
 
   };
 
