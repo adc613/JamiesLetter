@@ -23,7 +23,7 @@ class EnvelopeContainer extends React.Component {
     return (
 
       <Envelope 
-        className={this.props.className}
+        className={this.className}
         open={this.props.open}
         clickHandler={this.clickHandler}
       />

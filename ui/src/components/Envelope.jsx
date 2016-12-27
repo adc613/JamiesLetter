@@ -12,6 +12,8 @@ class Envelope extends React.Component {
 
     let state;
 
+    let className = this.props.className;
+
     switch(this.props.open % 3) {
       case 0:
         state = "closed";
@@ -24,10 +26,10 @@ class Envelope extends React.Component {
         break;
     }
 
-    //console.log(this.props.open);
+    console.log(this.props);
 
     return (
-      <div className="div-letter">
+      <div className={this.props.className}>
         <svg className="svg-envelope" onClick={this.props.clickHandler} viewBox="867 -200 1500 3000" version="1.1" >
           <desc>Created with Sketch.</desc>
           <defs>

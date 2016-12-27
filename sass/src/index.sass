@@ -33,7 +33,6 @@ body,
 
 
 .open,
-.full-open,
   #letter
     transform: translate(27px, 0px)
 
@@ -82,3 +81,15 @@ body,
   #flap-open
     transform: translate(308px, 95px) scale(-1, -1) translate(-308px, -2595px) rotateX(0deg)
     +full-open-transition()
+
+.envelope
+  transform: translate(0px, 2500px)
+  transition: 900ms cubic-bezier(0.4, 0, 1, 1) 0s
+
+.envelope-enter
+  transform: translate(0px, 0px)
+  transition: 900ms cubic-bezier(0.4, 0, 1, 1) 0s
+
+.envelope-exit
+  transform: translate(0px, 2500px)
+  transition: 900ms cubic-bezier(0.4, 0, 1, 1) 0s

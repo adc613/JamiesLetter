@@ -1,4 +1,5 @@
 export const OPEN = "LETTER @ OPEN";
+export const PAGE_STATE = "LETER @ PAGE_STATE";
 
 
 export function openAction(open) {
@@ -19,6 +20,28 @@ export function open() {
     let state = getState();
     let open = 1 + state.letter.get('open');
     dispatch(openAction(open));
+
+  };
+
+}
+
+export function pageStateAction(state) {
+
+  return {
+    type: PAGE_STATE,
+    payload:{
+      state
+    }
+  };
+
+}
+
+export function pageState() {
+
+  return (dispatch, getState) => {
+
+    let state = 1 + getState().letter.get('pageState');
+    dispatch(pageStateAction(state));
 
   };
 
