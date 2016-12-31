@@ -26,8 +26,6 @@ class Envelope extends React.Component {
         break;
     }
 
-    console.log(this.props);
-
     return (
       <div className={this.props.className}>
         <svg className="svg-envelope" onClick={this.props.clickHandler} viewBox="867 -200 1500 3000" version="1.1" >

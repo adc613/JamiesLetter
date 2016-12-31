@@ -5,7 +5,7 @@ body,
   height: 100%
 
 =full-open-transition()
-  transition: 6000ms cubic-bezier(0.4, 0, 1, 1) 0s
+  transition: 1000ms cubic-bezier(0.4, 0, 1, 1) 0s
 
 #Top-triangle
   fill: #00FF00
@@ -90,6 +90,24 @@ body,
   transform: translate(0px, 0px)
   transition: 900ms cubic-bezier(0.4, 0, 1, 1) 0s
 
-.envelope-exit
-  transform: translate(0px, 2500px)
-  transition: 900ms cubic-bezier(0.4, 0, 1, 1) 0s
+.letter-offScreen
+  position: absolute
+  height: 100%
+  width: 100%
+  transform: translate(0px, -2500px)
+
+.letter-enter
+  position: absolute
+  height: 100%
+  width: 100%
+  transform: translate(0px, 0px)
+  transition: 900ms cubic-bezier(0, 0.01, 0.05, 1.6) 1000ms
+
+#free-letter
+  max-width: 350px
+  margin: 0 auto
+  margin-top: 100px
+  padding: 10px 10px 10px 10px
+  background-color: red
+  box-shadow: 0px 0px 20px #888888
+  border-radius: 3px

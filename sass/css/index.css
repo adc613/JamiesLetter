@@ -42,25 +42,25 @@ body {
 
 .full-open #bottom-triangle {
   transform: translate(0, 2500px);
-  transition: 6000ms cubic-bezier(0.4, 0, 1, 1) 0s; }
+  transition: 1000ms cubic-bezier(0.4, 0, 1, 1) 0s; }
 .full-open #Triangle-3-Copy {
   transform: translate(447px, 386px) scale(-1, 1) rotate(90deg) translate(2053px, -386px);
-  transition: 6000ms cubic-bezier(0.4, 0, 1, 1) 0s; }
+  transition: 1000ms cubic-bezier(0.4, 0, 1, 1) 0s; }
 .full-open #Triangle-2 {
   transform: translate(308px, 286.5px) scale(1, -1) translate(-308px, -2786px);
-  transition: 6000ms cubic-bezier(0.4, 0, 1, 1) 0s; }
+  transition: 1000ms cubic-bezier(0.4, 0, 1, 1) 0s; }
 .full-open #Triangle-3 {
   transform: translate(168px, 387px) rotate(90deg) translate(2332px, -387px);
-  transition: 6000ms cubic-bezier(0.4, 0, 1, 1) 0s; }
+  transition: 1000ms cubic-bezier(0.4, 0, 1, 1) 0s; }
 .full-open #letter {
   transform: translate(27px, -2500px);
-  transition: 6000ms cubic-bezier(0.4, 0, 1, 1) 0s; }
+  transition: 1000ms cubic-bezier(0.4, 0, 1, 1) 0s; }
 .full-open #flap-closed {
   transform: translate(308px, 95px) scale(-1, -1) translate(-308px, -2595px) rotateX(90deg);
-  transition: 6000ms cubic-bezier(0.4, 0, 1, 1) 0s; }
+  transition: 1000ms cubic-bezier(0.4, 0, 1, 1) 0s; }
 .full-open #flap-open {
   transform: translate(308px, 95px) scale(-1, -1) translate(-308px, -2595px) rotateX(0deg);
-  transition: 6000ms cubic-bezier(0.4, 0, 1, 1) 0s; }
+  transition: 1000ms cubic-bezier(0.4, 0, 1, 1) 0s; }
 
 .envelope {
   transform: translate(0px, 2500px);
@@ -70,8 +70,26 @@ body {
   transform: translate(0px, 0px);
   transition: 900ms cubic-bezier(0.4, 0, 1, 1) 0s; }
 
-.envelope-exit {
-  transform: translate(0px, 2500px);
-  transition: 900ms cubic-bezier(0.4, 0, 1, 1) 0s; }
+.letter-offScreen {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  transform: translate(0px, -2500px); }
+
+.letter-enter {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  transform: translate(0px, 0px);
+  transition: 900ms cubic-bezier(0, 0.01, 0.05, 1.6) 1000ms; }
+
+#free-letter {
+  max-width: 350px;
+  margin: 0 auto;
+  margin-top: 100px;
+  padding: 10px 10px 10px 10px;
+  background-color: red;
+  box-shadow: 0px 0px 20px #888888;
+  border-radius: 3px; }
 
 /*# sourceMappingURL=index.css.map */

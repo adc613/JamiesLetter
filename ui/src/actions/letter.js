@@ -21,6 +21,11 @@ export function open() {
     let open = 1 + state.letter.get('open');
     dispatch(openAction(open));
 
+    if(open > 1) {
+      let pageState = 1 + state.letter.get('pageState');
+      dispatch(pageStateAction(pageState));
+    }
+
   };
 
 }

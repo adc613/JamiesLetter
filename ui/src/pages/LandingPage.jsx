@@ -1,6 +1,7 @@
 import React from 'react';
 import PureRenderMixin from 'react-addons-pure-render-mixin';
 import EnvelopeContainer from '../components/EnvelopeContainer';
+import Letter from '../components/Letter';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import * as actionCreators from '../actions/letter';
@@ -14,33 +15,44 @@ class LandingPage extends React.Component {
   }
 
   componentDidMount() {
-    setTimeout(this.props.actions.pageState, 100);
-    setTimeout(this.props.actions.pageState, 2000);
-    setTimeout(this.props.actions.pageState, 3000);
-    setTimeout(this.props.actions.pageState, 4000);
+    setTimeout(this.props.actions.pageState, 1000);
   }
 
   render() {
 
+    let letterClass;
     let envelopeClass;
-    switch (this.props.pageState % 3) {
+    let displayLetter;
+    switch (this.props.pageState % 4) {
       case 0:
+        letterClass = "letter-offScreen";
         envelopeClass = "envelope";
+        displayLetter = false;
         break;
       case 1:
+        letterClass = "letter-offScreen";
         envelopeClass = "envelope-enter";
+        displayLetter = true;
         break;
       case 2:
+        letterClass = "letter-enter";
         envelopeClass = "envelope-exit";
+        displayLetter = true;
         break;
     }
 
     if(this.props.pageState < 3) {
       return (
 
-        <EnvelopeContainer
-          className={envelopeClass}
-        />
+        <div>
+          <Letter 
+            className={letterClass}
+            displayLetter={displayLetter}
+          />
+          <EnvelopeContainer
+            className={envelopeClass}
+          />
+        </div>
 
       );
     } else {
