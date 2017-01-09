@@ -101,4 +101,130 @@ body {
   max-height: 100vh;
   margin: 0 auto; }
 
+.path-open {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: draw 30s linear forwards 11000ms; }
+
+.path-open-1 {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: draw 40s linear forwards 3000ms; }
+
+.path-open-2 {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: draw 40s linear forwards 3950ms; }
+
+.path-open-3 {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: draw 40s linear forwards 4550ms; }
+
+.path-open-4 {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: draw 40s linear forwards 4950ms; }
+
+.path-open-5 {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: draw 40s linear forwards 5150ms; }
+
+.path-open-6 {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: draw 40s linear forwards 6350ms; }
+
+.path-open-7 {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: draw 40s linear forwards 6850ms; }
+
+.path-open-8 {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: draw 40s linear forwards 7250ms; }
+
+.path-open-9 {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: draw 40s linear forwards 7950ms; }
+
+.path-open-10 {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: draw 40s linear forwards 8350ms; }
+
+.path-open-11 {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: draw 40s linear forwards 8750ms; }
+
+.path-open-branches {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: draw 20s linear forwards 11000ms; }
+
+.path-open-branches-1 {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: draw 20s linear forwards 3000ms; }
+
+.path-open-branches-2 {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: draw 20s linear forwards 4000ms; }
+
+.path-open-branches-3 {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: draw 20s linear forwards 5000ms; }
+
+.path-open-branches-4 {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: draw 20s linear forwards 6000ms; }
+
+.path-open-branches-5 {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: draw 20s linear forwards 7000ms; }
+
+.path-open-branches-6 {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: draw 20s linear forwards 8000ms; }
+
+.path-open-branches-7 {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: draw 20s linear forwards 9000ms; }
+
+.path-open-branches-8 {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: draw 20s linear forwards 9000ms; }
+
+.path-open-branches-9 {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: draw 20s linear forwards 9000ms; }
+
+.path-open-branches-10 {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: draw 20s linear forwards 9000ms; }
+
+.path-open-branches-11 {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: draw 20s linear forwards 3000ms; }
+
+@keyframes draw {
+  0% {
+    stroke-dashoffset: 1000; }
+  100% {
+    stroke-dashoffset: 0; } }
+
 /*# sourceMappingURL=index.css.map */
