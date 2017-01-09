@@ -1,8 +1,10 @@
 import React from 'react';
 import PureRenderMixin from 'react-addons-pure-render-mixin';
-import { Link } from 'react-router';
+import Seed from '../components/tree/Seed';
+import Tree from '../components/tree/FullTree';
 
-class LandingPage extends React.Component {
+
+class TreePage extends React.Component {
   constructor(props) {
     super(props);
     this.shouldComponentUpdate = PureRenderMixin.shouldComponentUpdate.bind(this);
@@ -11,14 +13,13 @@ class LandingPage extends React.Component {
   render() {
 
     return (
-      <li>
-        <li><Link to="/letter"> Letter </Link> </li>
-        <li><Link to="/tree"> Tree </Link> </li>
-      </li>
+      <div id="tree">
+        <Tree />
+      </div>
     );
 
   }
 }
 
 
-export default LandingPage;
+export default TreePage;
