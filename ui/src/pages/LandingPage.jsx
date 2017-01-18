@@ -1,6 +1,6 @@
 import React from 'react';
 import PureRenderMixin from 'react-addons-pure-render-mixin';
-
+import { Link } from 'react-router';
 
 class LandingPage extends React.Component {
   constructor(props) {
@@ -11,13 +11,14 @@ class LandingPage extends React.Component {
   render() {
 
     return (
-
-      <svg version="1.1">
-        <rect fill="#DDDDDD" stroke-width="1" width="614" height="391" rx="4"></rect>
-      </svg>
-
+      <li>
+        <li><Link to="/letter"> Letter </Link> </li>
+        <li><Link to="/tree"> Tree </Link> </li>
+      </li>
     );
+
   }
 }
+
 
 export default LandingPage;
