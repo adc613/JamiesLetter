@@ -19,7 +19,6 @@ class TreePage extends React.Component {
         <div id="bottom-half" />
         <Tree />
         <Leaves />
-
       </div>
     );
 
