@@ -261,12 +261,15 @@ body,
   height: 50%
   width: 100%
 
+.leaf-falling
+  animation: falling-leaf 3000ms linear forwards
+
 
 @keyframes draw
   0%
     stroke-dashoffset: 1000
   100%
-<<<<<<< HEAD
+    stroke-dashoffset: 0
 
 
 @keyframes fade-in
@@ -274,3 +277,11 @@ body,
     transform:  translateY(-20px) scale(0)
   100%
     transform: translateY(0px) scale(1)
+
+@keyframes falling-leaf
+  0%
+    opacity: 1
+    transform:  translateY(0px)
+  100%
+    opacity: 0
+    transform: translateY(200px)
