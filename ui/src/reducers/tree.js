@@ -2,6 +2,10 @@ import {
   DRAW_LEAF,
   CHANGE_CLASS,
   REMOVE_LEAF,
+  DRAW,
+  CLEAR_LEAVES,
+  REMEMBER_A_MEMORY,
+  SHOW,
 } from '../actions/tree';
 import { fromJS } from 'immutable';
 
@@ -9,7 +13,14 @@ const initialState = fromJS({
   images: [
     'test.jpg',
   ],
-  leaves: []
+  description: {
+    'test.jpg': "Testing 1 2 3 testing",
+  },
+  memory: {
+  },
+  leaves: [],
+  draw: false,
+  displayMemory: false,
 });
 
 export default function reducer(state=initialState, action) {
@@ -21,6 +32,14 @@ export default function reducer(state=initialState, action) {
       return changeClass(state, action.payload);
     case REMOVE_LEAF:
       return removeLeaf(state, action.payload);
+    case DRAW:
+      return setDraw(state, action.payload);
+    case CLEAR_LEAVES:
+      return clearLeaves(state, action.payload);
+    case REMEMBER_A_MEMORY:
+      return rememberAMemory(state, action.payload);
+    case SHOW:
+      return showMemory(state, action.payload);
     default:
       return state;
   }
@@ -60,5 +79,40 @@ export function removeLeaf(state, payload) {
 
   let index = payload.index;
   return state.deleteIn(['leaves', index]);
+
+}
+
+export function setDraw(state, payload) {
+
+  let shouldDraw = payload.shouldDraw;
+  return state.set('draw', shouldDraw);
+
+}
+
+
+export function clearLeaves(state, payload) {
+
+  let leaves = fromJS([]);
+  return state.set('leaves', leaves);
+
+}
+
+export function rememberAMemory(state, payload) {
+
+  let src = payload.src;
+  let description = payload.description;
+  let memory = fromJS({
+    src,
+    description,
+  });
+
+  return state.set('memory', memory);
+}
+
+
+export function showMemory(state, payload) {
+
+  let show = payload.show;
+  return state.set('displayMemory', show);
 
 }

@@ -13,11 +13,18 @@ class Leaves extends React.Component {
   }
 
   componentDidMount() {
-    setTimeout(this.props.actions.drawLeaf, 1000);
+    setTimeout(this.props.actions.initDraw, 1000);
+    //setTimeout(this.props.actions.initDraw, 10000);
   }
 
   leafClickHandler(event) {
-    console.log(event.target.src);
+    let src = event.target.src;
+    console.log(src);
+    setTimeout(() => {
+      console.log(src);
+      this.props.actions.rememberAMemory(src);
+    }, 4000);
+
     this.props.actions.removeLeaves();
   }
 
@@ -38,7 +45,20 @@ class Leaves extends React.Component {
 
   render() {
 
-    setTimeout(this.props.actions.drawLeaf, 1000);
+    if(this.props.draw) {
+      setTimeout(this.props.actions.drawLeaf, 1000);
+    }
+    if(this.props.displayMemory) {
+      let src = "/static/imgs/" + this.props.memory.get('src');
+      return (
+        <div id="memory">
+          <img src={src} id="memory-img" />
+          <p>
+            { this.props.memory.get('description') }
+          </p>
+        </div>
+      );
+    }
     return (
       <div>
         {
@@ -57,6 +77,9 @@ function mapStateToProps(state) {
 
   return {
     leaves: state.tree.get('leaves'),
+    draw: state.tree.get('draw'),
+    displayMemory: state.tree.get('displayMemory'),
+    memory: state.tree.get('memory'),
   };
 
 }
