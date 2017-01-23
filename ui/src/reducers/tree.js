@@ -101,9 +101,13 @@ export function rememberAMemory(state, payload) {
 
   let src = payload.src;
   let description = payload.description;
+  let id = payload.id;
+  let className = payload.className;
   let memory = fromJS({
     src,
     description,
+    id,
+    className,
   });
 
   return state.set('memory', memory);

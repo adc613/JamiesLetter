@@ -161,13 +161,15 @@ export function showMemoryAction(show) {
 }
 
 
-export function memoryAction(src, description) {
+export function memoryAction(src, description, id, className) {
 
   return {
     type: REMEMBER_A_MEMORY,
     payload: {
       src,
       description,
+      id,
+      className
     }
   };
 }
@@ -179,8 +181,22 @@ export function rememberAMemory(src) {
     src = src.split('/');
     src = src[src.length - 1];
     let description = getState().tree.getIn(['description', src]);
-    dispatch(memoryAction(src, description));
+    dispatch(memoryAction(src, description, 'memory', ''));
     dispatch(showMemoryAction(true));
+  };
+
+}
+
+export function removeMemory() {
+
+  return (dispatch, getState) => {
+    let state = getState().tree;
+    let src = state.getIn(['memory', 'src']);
+    let description = state.getIn(['memory', 'description']);
+    dispatch(memoryAction(src, description, 'memory', 'exit'));
+    setTimeout(() => {
+      dispatch(showMemoryAction(false));
+    }, 3000);
   };
 
 }
