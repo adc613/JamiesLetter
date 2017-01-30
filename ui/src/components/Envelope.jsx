@@ -36,21 +36,21 @@ class Envelope extends React.Component {
                   <use href="#path-1"></use>
               </mask>
           </defs>
-          <g className={state} stroke="none" strokeWidth="1" fill="none" fillRule="evenodd" transform="translate(1320.000000, 32.000000)">
+          <g className={state} stroke="none" strokeWidth="1" fill="none" fillRule="evenodd" transform="translate(1320.000000, 970)">
               <polygon id="Triangle-2" stroke="#979797" fill="#9B9B9B" transform="translate(308.000000, 286.500000) scale(1, -1) translate(-308.000000, -286.500000) " points="308 191 615 382 1 382"></polygon>
               <path d="M289.515706,185.087156 C299.7243,191.636123 316.27105,191.639106 326.484294,185.087156 L615,2.84217094e-14 L1,2.84217094e-14 L289.515706,185.087156 Z" id="flap-open" stroke="#979797" fill="#D8D8D8" transform="translate(308.000000, 95.000000) scale(-1, -1) translate(-308.000000, -95.000000) "></path>
               <g id="letter" transform="translate(27.000000, 114.000000)">
                   <use id="Letter" stroke="#979797" mask="url(#mask-2)" strokeWidth="2" fill="#FFFFFF" href="#path-1"></use>
                   <text id="letter-text" fontFamily="Roboto-Medium, Roboto" fontSize="24" fontWeight="400" fillOpacity="0.87" fill="#000000">
-                      <tspan x="51" y="103">Dear Jamie,</tspan>
-                      <tspan x="51" y="131"></tspan>
-                      <tspan x="51" y="159">lorem  is simply dummy text of the printing </tspan>
-                      <tspan x="51" y="187">and typesetting industry. Lorem Ipsum has </tspan>
-                      <tspan x="51" y="215">been the industry’s standard dummy text </tspan>
-                      <tspan x="51" y="243">ever since the 1500s, when an unknown </tspan>
-                      <tspan x="51" y="271">printer took a galley of type and scrambled </tspan>
-                      <tspan x="51" y="299">it to make a type specimen book. It has </tspan>
-                      <tspan x="51" y="327">survived not only five </tspan>
+                      <tspan x="41" y="103">Dear Jamie,</tspan>
+                      <tspan x="41" y="131"></tspan>
+                      <tspan x="41" y="159">We've been dating for over two</tspan>
+                      <tspan x="41" y="187">years now and at every occassion you</tspan>
+                      <tspan x="41" y="215">seem to come up with the most</tspan>
+                      <tspan x="41" y="243">thoughtful gifts. I'll never forget when</tspan>
+                      <tspan x="41" y="271">you wrote me 20 individual lettersr for</tspan>
+                      <tspan x="41" y="299">my birthday (yes I counted). Each letter</tspan>
+                      <tspan x="41" y="327">has its own label raning from "open</tspan>
                   </text>
               </g>
               <polygon id="Triangle-3" stroke="#979797" fill="#D8D8D8" transform="translate(168.000000, 387.000000) rotate(90.000000) translate(-168.000000, -387.000000) " points="168 219 363 555 -27 555"></polygon>

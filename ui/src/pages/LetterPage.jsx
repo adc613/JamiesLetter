@@ -12,10 +12,22 @@ class LandingPage extends React.Component {
     super(props);
     this.shouldComponentUpdate = PureRenderMixin.shouldComponentUpdate.bind(this);
     this.componentDidMount = this.componentDidMount.bind(this);
+    this.inputChangeHandler = this.inputChangeHandler.bind(this);
   }
 
   componentDidMount() {
-    setTimeout(this.props.actions.pageState, 1000);
+    if(this.props.pageState == 0) {
+      setTimeout(this.props.actions.pageState, 1000);
+    }
+  }
+
+  letterClickHandler(event) {
+    console.log('working');
+    event.preventDefault();
+  }
+
+  inputChangeHandler(event) {
+    this.props.actions.inputChange(event.target.value);
   }
 
   render() {
@@ -38,16 +50,39 @@ class LandingPage extends React.Component {
         letterClass = "letter-enter";
         envelopeClass = "envelope-exit";
         displayLetter = true;
+        setTimeout(this.props.actions.pageState, 1000);
+      case 3:
+        letterClass = "letter-enter";
+        envelopeClass = "envelope-exit";
+        displayLetter = true;
         break;
     }
+
+    let clickHandler;
+    console.log(this.props);
+    if(this.props.disabled) {
+      console.log('yes');
+      clickHandler = this.letterClickHandler;
+    } else {
+      console.log('no');
+      clickHandler = (event) => {
+        console.log('you did it');
+      };
+    }
+    console.log(clickHandler);
 
     if(this.props.pageState < 3) {
       return (
 
-        <div>
+        <div className="envelope-page">
+          <div id="top-half" />
+          <div id="bottom-half" />
           <Letter 
             className={letterClass}
             displayLetter={displayLetter}
+            clickHandler={this.letterClickHandler}
+            question={this.props.question}
+            answer={this.props.answer}
           />
           <EnvelopeContainer
             className={envelopeClass}
@@ -57,9 +92,18 @@ class LandingPage extends React.Component {
       );
     } else {
       return (
-        <EnvelopeContainer
-          className={envelopeClass}
-        />
+        <div className="envelope-page">
+          <div id="top-half" />
+          <div id="bottom-half" />
+          <Letter 
+            className={letterClass}
+            displayLetter={displayLetter}
+            inputChangeHandler={this.inputChangeHandler}
+            clickHandler={clickHandler}
+            question={this.props.question}
+            answer={this.props.answer}
+          />
+        </div>
       );
     }
   }
@@ -69,6 +113,9 @@ class LandingPage extends React.Component {
 function mapStateToProps(state) {
   return {
     pageState: state.letter.get('pageState'),
+    answer: state.letter.getIn(['riddle', 'answer']),
+    question: state.letter.getIn(['riddle', 'question']),
+    disabled: state.letter.getIn(['riddle', 'disabled']),
   };
 }
 

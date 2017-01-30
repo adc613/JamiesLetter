@@ -206,7 +206,7 @@ function randomLocation(rect) {
 
   let left = rect.left;
   let right = rect.right;
-  left += (Math.random() * (right - left));
+  left += (Math.random() * (right - left - 50));
 
   let top = rect.top;
   let bottom = rect.bottom;

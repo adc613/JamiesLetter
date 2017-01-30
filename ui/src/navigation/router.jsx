@@ -15,8 +15,7 @@ class App extends React.Component {
   render() {
     return (
       <Router history={browserHistory}>
-        <Route path="/" component={LandingPage} />
-        <Route path="/letter" component={LetterPage} />
+        <Route path="/" component={LetterPage} />
         <Route path="/tree" component={TreePage} />
       </Router>
     );

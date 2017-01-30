@@ -16,8 +16,7 @@ class Leaves extends React.Component {
   }
 
   componentDidMount() {
-    setTimeout(this.props.actions.initDraw, 1000);
-    //setTimeout(this.props.actions.initDraw, 10000);
+    setTimeout(this.props.actions.initDraw, 10000);
   }
 
   leafClickHandler(event) {

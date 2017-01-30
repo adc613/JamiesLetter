@@ -14,9 +14,9 @@ class Memory extends React.Component {
     console.log(this.props);
     return (
       <div id={this.props.id} className={this.props.className} onClick={this.props.clickHandler}>
-        <div className="content" onClick={this.props.falseClickHandler}>
-          <img src={this.props.src} id="memory-img" />
-          <p>
+        <div className="content" >
+          <img src={this.props.src} id="memory-img" onClick={this.props.falseClickHandler}/>
+          <p onClick={this.props.falseClickHandler}>
             { this.props.description }
           </p>
         </div>
