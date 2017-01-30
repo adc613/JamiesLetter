@@ -57,7 +57,7 @@ const initialState = fromJS({
     'pic16.jpg': "I'm glad you understand tennis comes first",
     'pic17.jpg': "Feed me, AH!",
     'pic18.jpg': "Hey everyone come see how good I look",
-    'pic19.jpg': "This is one of the first pictures we ever took together",
+    'pic19.jpg': "When you get stressed out so you hide in the library and watch Gaurdians of the Galaxy until Jamie comes and rescues you...",
     'pic20.jpg': "Never did find the waterall, but this is a great picture",
     'pic21.jpg': "Smile ;)",
     'pic22.jpg': "Look how much fun we're having",
