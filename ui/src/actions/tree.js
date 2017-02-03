@@ -34,7 +34,6 @@ export function drawLeaf() {
 
     let leaves = getState().tree.get('images');
     let size = leaves.size;
-    if(size > 50) return;
     let index = Math.floor(Math.random() * size);
     let leaf = leaves.get(index);
     let left = rect.left;
@@ -50,7 +49,8 @@ export function drawLeaf() {
     size = getState().tree.get('leaves').size;
     let key = 'leaf-' + size;
 
-    dispatch(drawLeafAction(style, leaf, key));
+    if(size < 128)
+      dispatch(drawLeafAction(style, leaf, key));
 
   };
 

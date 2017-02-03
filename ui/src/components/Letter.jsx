@@ -45,16 +45,16 @@ class Letter extends React.Component {
             <div id="riddle">
               <h3>Answer the question below to continue</h3>
               <h4>{this.props.question}</h4>
-              <input
-                onChange={this.props.inputChangeHandler}
-                type="text"
-                placeholder="Write answer here"
-                value={this.props.answer}
-              />
-              <br />
-              <Link id="riddle-submit" onClick={this.props.clickHandler} to="/tree">
-                <button> Submit </button>
-              </Link>
+              <form onSubmit={this.props.submitHandler}>
+                <input
+                  onChange={this.props.inputChangeHandler}
+                  type="text"
+                  placeholder="Write answer here"
+                  value={this.props.answer}
+                />
+                <br />
+                <button type="submit" disabled={this.props.disabled}> Submit </button>
+              </form>
             </div>
           </div>
         </div>

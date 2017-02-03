@@ -13,6 +13,7 @@ class LandingPage extends React.Component {
     this.shouldComponentUpdate = PureRenderMixin.shouldComponentUpdate.bind(this);
     this.componentDidMount = this.componentDidMount.bind(this);
     this.inputChangeHandler = this.inputChangeHandler.bind(this);
+    this.submitHandler = this.submitHandler.bind(this);
   }
 
   componentDidMount() {
@@ -21,9 +22,12 @@ class LandingPage extends React.Component {
     }
   }
 
-  letterClickHandler(event) {
+  submitHandler(event) {
     console.log('working');
     event.preventDefault();
+    if(!this.props.disabled) {
+      this.props.history.push('/tree');
+    }
   }
 
   inputChangeHandler(event) {
@@ -58,29 +62,17 @@ class LandingPage extends React.Component {
         break;
     }
 
-    let clickHandler;
-    console.log(this.props);
-    if(this.props.disabled) {
-      console.log('yes');
-      clickHandler = this.letterClickHandler;
-    } else {
-      console.log('no');
-      clickHandler = (event) => {
-        console.log('you did it');
-      };
-    }
-    console.log(clickHandler);
-
     if(this.props.pageState < 3) {
       return (
 
         <div className="envelope-page">
           <div id="top-half" />
           <div id="bottom-half" />
-          <Letter 
+          <Letter
+            disabled={this.props.disabled}
             className={letterClass}
             displayLetter={displayLetter}
-            clickHandler={this.letterClickHandler}
+            submitHandler={this.submitHandler}
             question={this.props.question}
             answer={this.props.answer}
           />
@@ -95,11 +87,12 @@ class LandingPage extends React.Component {
         <div className="envelope-page">
           <div id="top-half" />
           <div id="bottom-half" />
-          <Letter 
+          <Letter
+            disabled={this.props.disabled}
             className={letterClass}
             displayLetter={displayLetter}
             inputChangeHandler={this.inputChangeHandler}
-            clickHandler={clickHandler}
+            submitHandler={this.submitHandler}
             question={this.props.question}
             answer={this.props.answer}
           />

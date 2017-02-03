@@ -143,19 +143,19 @@ body,
   #riddle-submit
     width: 100%
 
-    button
-      border: none
-      background-color: rgba(45,118,222,0.33)
-      width: 100%
-      color: white
-      padding-top: 10px
-      padding-bottom: 10px
-      border-radius: 5px
-      font-size: 16px
-      font-weight: bold
-      transition: 200ms linear
-      &:hover
-        background-color: rgba(113,164,147,0.45)
+  button
+    border: none
+    background-color: rgba(45,118,222,0.33)
+    width: 100%
+    color: white
+    padding-top: 10px
+    padding-bottom: 10px
+    border-radius: 5px
+    font-size: 16px
+    font-weight: bold
+    transition: 200ms linear
+    &:hover
+      background-color: rgba(113,164,147,0.45)
 
 #tree
   svg
@@ -313,26 +313,31 @@ body,
   margin: 0 auto
   animation: memory-entrance 1000ms cubic-bezier(0, 0, 0.6, 1.4) forwards, movie-theater 500ms linear forwards 1000ms
 
-#memory .content
-  height: 100%
-  width: 80%
-  margin: 0 auto
-  display: flex
-  flex-direction: column
-  justify-content: center
+
+  .content
+    height: 100%
+    width: 80%
+    margin: 0 auto
+    display: flex
+    flex-direction: column
+    justify-content: center
+
+    p
+      max-width: 800px
+      min-width: 80%
+      max-height: 20%
+      padding: 30px
+      background-color: rgba(255, 255, 255, 0.70)
+      border-radius: 12px
+      margin: 0 auto
+      margin-top: 16px
+
 
 #memory-img
   margin: 0 auto
   max-width: 50%
   max-height: 80%
   border-radius: 4px
-
-#memory .content p
-  max-width: 100%
-  max-height: 20%
-  padding: 30px
-  background-color: rgba(255, 255, 255, 0.70)
-  border-radius: 12px
 
 #memory.exit
   animation: falling-leaf 3000ms linear forwards

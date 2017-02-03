@@ -23,6 +23,18 @@ let riddles = [
     answer: 'june'
   },
   {
+    question: "Best restuarant in Evanston?",
+    answer: 'sarkis'
+  },
+  {
+    question: "Is Evanston better than Boston?",
+    answer: 'yes'
+  },
+  {
+    question: "Where was our first date?",
+    answer: 'panera'
+  },
+  {
     question: "What's my favorite candy?",
     answer: 'gummy bears'
   },
