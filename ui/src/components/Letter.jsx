@@ -13,8 +13,6 @@ class Letter extends React.Component {
 
   render() {
 
-    console.log(this.props);
-    console.log(this.props.clickHandler);
     if(this.props.displayLetter) {
       return (
         <div className={this.props.className}>

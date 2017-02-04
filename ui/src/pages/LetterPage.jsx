@@ -23,7 +23,6 @@ class LandingPage extends React.Component {
   }
 
   submitHandler(event) {
-    console.log('working');
     event.preventDefault();
     if(!this.props.disabled) {
       this.props.history.push('/tree');

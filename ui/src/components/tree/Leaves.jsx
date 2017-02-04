@@ -21,9 +21,7 @@ class Leaves extends React.Component {
 
   leafClickHandler(event) {
     let src = event.target.src;
-    console.log(src);
     setTimeout(() => {
-      console.log(src);
       this.props.actions.rememberAMemory(src);
     }, 3500);
 

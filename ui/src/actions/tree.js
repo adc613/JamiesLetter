@@ -116,9 +116,7 @@ export function removeLeaves() {
       setTimeout(removeLeaf(dispatch, i), interval);
     }
 
-    console.log('are you two still living');
     setTimeout(() => {
-      console.log('clear');
       dispatch(clearLeavesAction());
     }, 4000);
 
@@ -178,7 +176,6 @@ export function memoryAction(src, description, id, className) {
 export function rememberAMemory(src) {
 
   return (dispatch, getState) => {
-    console.log(src);
     src = src.split('/');
     src = src[src.length - 1];
     let description = getState().tree.getIn(['description', src]);

@@ -11,7 +11,6 @@ class Memory extends React.Component {
 
     let id = this.props.id;
 
-    console.log(this.props);
     return (
       <div id={this.props.id} className={this.props.className} onClick={this.props.clickHandler}>
         <div className="content" >
