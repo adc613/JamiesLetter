@@ -35,10 +35,7 @@ class Letter extends React.Component {
             </p>
             <br />
             <p>
-              P.S. I haven’t shown it to anyone yet, it’s been killing me not being able to share my work, but I wanted you to be the first one to see it.
-            </p>
-            <p>
-              P.S.S. If you comment on any of my grammatical errors or run on sentences I’m taking the site down (just kidding, kind of….).
+              P.S. I haven’t shown it to anyone yet, it’s been killing me not being able to share my work, but I wanted you to be the first one to see it. Also, if you comment on any of my grammatical errors or run on sentences I’m taking the site down.
             </p>
             <div id="riddle">
               <h3>Answer the question below to continue</h3>

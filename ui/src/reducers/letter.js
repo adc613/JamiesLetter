@@ -7,24 +7,12 @@ import { fromJS } from 'immutable';
 
 let riddles = [
   {
+    question: "Finish this sentence. Log base ______",
+    answer: 'adam'
+  },
+  {
     question: "What's the most comfortable sleeping position?",
     answer: 'log'
-  },
-  {
-    question: "What's my favorite color?",
-    answer: 'red'
-  },
-  {
-    question: "What's my favorite food?",
-    answer: 'bacon'
-  },
-  {
-    question: "What month is my birthday?",
-    answer: 'june'
-  },
-  {
-    question: "Best restuarant in Evanston?",
-    answer: 'sarkis'
   },
   {
     question: "Is Evanston better than Boston?",
@@ -35,8 +23,28 @@ let riddles = [
     answer: 'panera'
   },
   {
+    question: "Jamie tracked my location without me knowning when I was interviewing in what city?",
+    answer: 'boston'
+  },
+  {
+    question: "What did I get you for our first Christmas?",
+    answer: 'pajamas'
+  },
+  {
+    question: "What color was our favorite Clarke fouton, where we watched every episode of Game of Thrones my sophomore year?",
+    answer: 'black'
+  },
+  {
     question: "What's my favorite candy?",
     answer: 'gummy bears'
+  },
+  {
+    question: "When Jamie is sad I make her dance with me to what John Legend song?",
+    answer: 'slow dance'
+  },
+  {
+    question: "I was wearing a ______ when we first met.",
+    answer: 'towel'
   },
 ];
 let riddle = riddles[Math.floor(Math.random() * riddles.length)];
@@ -87,6 +95,8 @@ function inputChange(state, payload) {
   state = state.setIn(['riddle', 'answer'], value);
   if (value.toLowerCase() == state.getIn(['riddle', 'actualAnswer'])) {
     state = state.setIn(['riddle', 'disabled'], false);
+  } else {
+    state = state.setIn(['riddle', 'disabled'], true);
   }
   return state;
 
