@@ -7,7 +7,7 @@ import { fromJS } from 'immutable';
 
 let riddles = [
   {
-    question: "Finish this sentence. Log base ______",
+    question: "How would you finish this senetence \"Log base ______\"?",
     answer: 'adam'
   },
   {
@@ -23,7 +23,7 @@ let riddles = [
     answer: 'panera'
   },
   {
-    question: "Jamie tracked my location without me knowning when I was interviewing in what city?",
+    question: "You tracked my location without me knowning when I was interviewing in what city?",
     answer: 'boston'
   },
   {
@@ -31,7 +31,7 @@ let riddles = [
     answer: 'pajamas'
   },
   {
-    question: "What color was our favorite Clarke fouton, where we watched every episode of Game of Thrones my sophomore year?",
+    question: "Sophomore year I made you watch every episode of Game of Thrones with me. What was the color of the futon we watched it on?",
     answer: 'black'
   },
   {
@@ -39,11 +39,11 @@ let riddles = [
     answer: 'gummy bears'
   },
   {
-    question: "When Jamie is sad I make her dance with me to what John Legend song?",
+    question: "When you are sad I make you dance with me to what John Legend song?",
     answer: 'slow dance'
   },
   {
-    question: "I was wearing a ______ when we first met.",
+    question: "What was I wearing when we first met?",
     answer: 'towel'
   },
 ];

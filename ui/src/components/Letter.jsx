@@ -12,6 +12,11 @@ class Letter extends React.Component {
   }
 
   render() {
+    let className = '';
+    if(this.props.disabled) {
+      className = 'btn-disabled';
+    }
+
 
     if(this.props.displayLetter) {
       return (
@@ -25,7 +30,7 @@ class Letter extends React.Component {
               You had such high standards that I could see the disappointment when you only bought me slippers and “The Ghost in the Wires” for christmas. However I wear those slippers every day (in fact I’m wearing them now). Also “The Ghost in the Wires” was one of the most interesting books I’ve ever read; I read it in a week. You and I both know how much of an achievement that is for me. Even at your worst you manage to find great gifts.
             </p>
             <p>
-              On the other hand whenever your birthday would come around I’d call my sister to ask her to pick out a gift for you. I was really proud of myself this year when I bought you a silly christmas card, but you pointed out that I didn’t even write personal message in the card (in hindsight that would have been a great idea). I know gift giving isn’t a competition but you’ve beaten me every time. For once I wanted to give you the gift that you deserve. I hope you enjoy the site.
+              On the other hand whenever your birthday would come around I’d call my sister to ask her to pick out a gift for you. I was really proud of myself this year when I bought you a silly christmas card, but you pointed out that I didn’t even write personal message in the card (in hindsight that would have been a great idea). I know gift giving isn’t a competition but you’ve beaten me every time. For once I wanted to give you the gift that you deserve. I hope you enjoy the site and Happy Valentine's Day!
             </p>
             <p>
               Love,
@@ -48,7 +53,7 @@ class Letter extends React.Component {
                   value={this.props.answer}
                 />
                 <br />
-                <button type="submit" disabled={this.props.disabled}> Submit </button>
+                <button type="submit" className={className}> Submit </button>
               </form>
             </div>
           </div>
