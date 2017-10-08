@@ -74,6 +74,7 @@ class LandingPage extends React.Component {
             submitHandler={this.submitHandler}
             question={this.props.question}
             answer={this.props.answer}
+            actualAnswer={this.props.actualAnswer}
           />
           <EnvelopeContainer
             className={envelopeClass}
@@ -94,6 +95,7 @@ class LandingPage extends React.Component {
             submitHandler={this.submitHandler}
             question={this.props.question}
             answer={this.props.answer}
+            actualAnswer={this.props.actualAnswer}
           />
         </div>
       );
@@ -106,6 +108,7 @@ function mapStateToProps(state) {
   return {
     pageState: state.letter.get('pageState'),
     answer: state.letter.getIn(['riddle', 'answer']),
+    actualAnswer: state.letter.getIn(['riddle', 'actualAnswer']),
     question: state.letter.getIn(['riddle', 'question']),
     disabled: state.letter.getIn(['riddle', 'disabled']),
   };
