@@ -1,0 +1,26 @@
+[debug] [2018-04-08T22:57:42.249Z] ----------------------------------------------------------------------
+[debug] [2018-04-08T22:57:42.251Z] Command:       /home/adam/.nvm/versions/node/v8.4.0/bin/node /home/adam/.nvm/versions/node/v8.4.0/bin/firebase deploy
+[debug] [2018-04-08T22:57:42.251Z] CLI Version:   3.17.6
+[debug] [2018-04-08T22:57:42.251Z] Platform:      linux
+[debug] [2018-04-08T22:57:42.251Z] Node Version:  v8.4.0
+[debug] [2018-04-08T22:57:42.251Z] Time:          Sun Apr 08 2018 15:57:42 GMT-0700 (PDT)
+[debug] [2018-04-08T22:57:42.251Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-04-08T22:57:42.259Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-04-08T22:57:42.259Z] > authorizing via signed-in user
+[debug] [2018-04-08T22:57:42.261Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/jamiesletter  
+  
+ Sun Apr 08 2018 15:57:42 GMT-0700 (PDT)
+[debug] [2018-04-08T22:57:43.643Z] <<< HTTP RESPONSE 200
+[debug] [2018-04-08T22:57:43.644Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/jamiesletter/tokens  
+  
+ Sun Apr 08 2018 15:57:43 GMT-0700 (PDT)
+[debug] [2018-04-08T22:57:45.318Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Deploying to 'jamiesletter'...
+[info] 
+[info] i  deploying hosting
+[info] i  hosting: preparing dist directory for upload...
+[debug] [2018-04-08T22:57:49.584Z] >>> HTTP REQUEST PUT https://deploy.firebase.com/v1/hosting/jamiesletter/uploads/-L9bTh14hUYD4HlT2I9p?fileCount=64&message=  
+  
+ Sun Apr 08 2018 15:57:49 GMT-0700 (PDT)
